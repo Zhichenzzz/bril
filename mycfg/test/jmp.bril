@@ -1,0 +1,16 @@
+@main {
+  v1: int = const 4;
+  v2: int = const 5;
+  jmp .sm1;
+  v: int = const 2;
+.sm1:
+  print v;
+  v: int = const 4;
+  b: bool = const false;
+  br b .there .here;
+.here:
+  v: int = const 2;
+.there:
+  print v;
+ret;
+}
